@@ -12,3 +12,6 @@
         - Title & Description
     - Movie Suggesitons
         - Movie lists * N
+
+- Vercel
+    used vercel for deployment
