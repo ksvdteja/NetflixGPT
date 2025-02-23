@@ -1,6 +1,7 @@
 {
   "name": "netflixgpt",
   "private": true,
+  "homepage": ".",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,6 +12,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.7",
+    "@vercel/analytics": "^1.5.0",
+    "firebase": "^11.3.1",
+    "punycode": "^2.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^4.0.7"
