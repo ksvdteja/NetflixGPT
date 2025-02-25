@@ -7,8 +7,8 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { addUser } from "../utils/userSlice";
+import { NETFLIX_BACK_GROUND_IMG } from "../utils/constants";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -16,7 +16,6 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
-  const navigate = useNavigate();
 
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
@@ -51,9 +50,13 @@ const Login = () => {
               // Profile updated!
               const { uid, email, displayName, photoURL } = auth.currentUser;
               dispatch(
-                addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL })
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
               );
-              navigate("/browse");
             })
             .catch((error) => {
               // An error occurred
@@ -76,7 +79,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -91,7 +93,7 @@ const Login = () => {
       <Header />
       <div className="w-[118%] absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/0cf2c109-3af1-4a9d-87d7-aecfac5fe881/web/IN-en-20250217-TRIFECTA-perspective_c3376e06-9aff-4657-aafb-91256a597b7c_large.jpg"
+          src={NETFLIX_BACK_GROUND_IMG}
           alt="netflix-back-ground-img"
         />
       </div>
