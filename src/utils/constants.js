@@ -16,4 +16,7 @@ export const API_OPTIONS = {
   },
 };
 
+export const OPENAI_KEY =
+  "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";
+
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";

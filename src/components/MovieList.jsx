@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import "../utils/Scroll.css";
 
 const MovieList = ({ title, movies }) => {
-  console.log(movies);
+  //console.log(movies);
   return (
     <div className="">
       <h1 className="text-2xl pl-2 text-white pb-2">{title}</h1>
