@@ -15,3 +15,4 @@
 
 - Vercel
     - used vercel for deployment
+    - https://netflix-gpt-xi-ashy.vercel.app/browse
