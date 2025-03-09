@@ -14,4 +14,4 @@
         - Movie lists * N
 
 - Vercel
-    used vercel for deployment
+    - used vercel for deployment
