@@ -14,4 +14,5 @@
         - Movie lists * N
 
 - Vercel
-    used vercel for deployment
+    - used vercel for deployment
+    - https://netflix-gpt-xi-ashy.vercel.app/browse
