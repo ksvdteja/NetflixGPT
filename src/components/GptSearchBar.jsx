@@ -37,9 +37,9 @@ const GptSearchBar = () => {
   const handleGptSearchClick = async () => {
     //Make an api call to get the movie results
     const aiQuery =
-      "Act as a Movie Recommendation system and suggest some movies for the query and if the query gives a movie name then search for that movie and give the first name as that movie in result: " +
+      "Act as a Movie and Web Series Recommendation system and suggest some movies and web series for the query and if the query gives a movie or web series name then search for that movie or web series and give the first result as that movie or web series in result: " +
       searchText.current.value +
-      ". Only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Pushpa, KGF, Interstellar, Animal, Avengers: End Game";
+      ". Only give me names of 10 movies, comma seperated like the example result given ahead. Example Result: Pushpa, KGF, Interstellar, Animal, Avengers: End Game";
     const model = geminiAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     // const prompt = "Explain how AI works";
