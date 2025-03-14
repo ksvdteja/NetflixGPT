@@ -6,7 +6,7 @@ import { addUpComingMovies } from "../utils/moviesSlice";
 const useUpComingMovies = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    getUpComingMovies && upComingMovies();
+    !getUpComingMovies && upComingMovies();
   }, []);
 
   const getUpComingMovies = useSelector((store) => store.movies.upComingMovies);
