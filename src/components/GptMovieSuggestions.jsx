@@ -9,13 +9,14 @@ const GptMovieSuggestions = () => {
   // Check if movieNames or movieResults are null or undefined
   if (!movieNames || !movieResults) {
     return (
-      <div className="p-4 m-4 bg-black text-white">
+      <div className="p-4 m-4 rounded-md bg-black text-white">
         No suggestions available.
       </div>
     );
   }
+
   return (
-    <div className="p-4 m-4 bg-black text-white">
+    <div className="p-4 m-4 rounded-md bg-black opacity-90 text-white">
       <div>
         {movieNames.map((movieName, index) => (
           <MovieList

@@ -93,6 +93,7 @@ const Login = () => {
       <Header />
       <div className="w-[118%] absolute">
         <img
+          className="h-screen object-cover md:h-full"
           src={NETFLIX_BACK_GROUND_IMG}
           alt="netflix-back-ground-img"
         />

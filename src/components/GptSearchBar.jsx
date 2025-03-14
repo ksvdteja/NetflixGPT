@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import openai from "../utils/openai";
 import { geminiAI } from "../utils/geminiai";
 import { API_OPTIONS } from "../utils/constants";
 import { addGptMovieResult } from "../utils/gptSlice";
@@ -38,7 +37,7 @@ const GptSearchBar = () => {
   const handleGptSearchClick = async () => {
     //Make an api call to get the movie results
     const aiQuery =
-      "Act as a Movie Recommendation system and suggest some movies for the query: " +
+      "Act as a Movie Recommendation system and suggest some movies for the query and if the query gives a movie name then search for that movie and give the first name as that movie in result: " +
       searchText.current.value +
       ". Only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Pushpa, KGF, Interstellar, Animal, Avengers: End Game";
     const model = geminiAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -66,9 +65,9 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[10%] flex justify-center">
+    <div className="pt-[35%] md:pt-[10%] flex justify-center">
       <form
-        className="w-1/2 bg-black opacity-85 grid grid-cols-12 rounded-md"
+        className="w-full md:w-1/2 bg-black opacity-85 grid grid-cols-12 rounded-md"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
