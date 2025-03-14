@@ -17,6 +17,8 @@ export const API_OPTIONS = {
 };
 
 export const OPENAI_KEY =
-  "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";
+  "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";
+
+export const GEMINIAI_KEY = "AIzaSyCowxALTY8ECJfmxw3qQMh0vYlUbFeeTis";
 
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";

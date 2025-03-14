@@ -3,6 +3,7 @@ import { OPENAI_KEY } from './constants';
 
 const openai = new OpenAI({
   apiKey: OPENAI_KEY, // This is the default and can be omitted
+  dangerouslyAllowBrowser: true
 });
 
 // async function main() {
